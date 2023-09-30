@@ -28,7 +28,7 @@
     <button 
         disabled={!(
             user.un && user.nev && pw && pw.length > 3 &&
-            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(user.mail)
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(user.mail)
         )}
         on:click={() => {
             var tosend = Object.entries(user).map(v => v.join('¨')).join('|')
