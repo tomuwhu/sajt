@@ -12,11 +12,11 @@
 <h1>Regisztráció</h1>
 <form>
     {#each ml as x}
-    <input placeholder={x[0]} bind:value={user[x[1]]}>
+    <input type="text" placeholder={x[0]} autocomplete="off" bind:value={user[x[1]]}>
     <br>
     <br>
     {/each}
-    <input placeholder="Jelszó" type="password" bind:value={pw}>
+    <input placeholder="Jelszó" type="password" autocomplete="new-password" bind:value={pw}>
     <br><br>
     <button 
         disabled={!(user.un && user.nev && pw && pw.length > 7 && user.mail)}
