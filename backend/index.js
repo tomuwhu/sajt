@@ -22,6 +22,17 @@ app.get('/be/:id', (req, res) => {
     res.send(req.params.id.split("").reverse().join(""))
 })
 
+app.get('/listall', (req, res) => {
+  db.all(`SELECT * FROM customers`, [], (err, data) => { 
+    if (err) {
+      console.log(err)
+      res.send({err, data})
+    } else {
+      res.send({err, data})
+    }
+  })
+})
+
 app.get('/reg/:data', (req, res) => {
     var user = Object.fromEntries(req.params.data.split('|').map(v => v.split('¨')))
   db.run(`INSERT INTO customers (un, nev, pwhash) VALUES ('${user.un}', '${user.nev}', '${user.pw}')`, [], err => { 
