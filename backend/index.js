@@ -24,7 +24,14 @@ app.get('/be/:id', (req, res) => {
 
 app.get('/reg/:data', (req, res) => {
     var user = Object.fromEntries(req.params.data.split('|').map(v => v.split('¨')))
-    db.run(`INSERT INTO customers (un, nev, pwhash) VALUES ('${user.un}', '${user.nev}', '${user.pw}')`)
+  db.run(`INSERT INTO customers (un, nev, pwhash) VALUES ('${user.un}', '${user.nev}', '${user.pw}')`, [], err => { 
+    if (err) {
+      console.log(err)
+      res.send({ok: false, err})
+    } else {
+      res.send({ok: true, err})
+    }
+  })
 })
 
 app.listen(port, () => {
