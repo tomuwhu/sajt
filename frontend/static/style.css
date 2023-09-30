@@ -16,3 +16,13 @@ form {
     border-radius: 15px;
     box-shadow: 1px 1px 3px black;
 }
+a {
+    all: unset;
+    margin: 20px;
+    color: rgb(27, 73, 58);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px black;
+    border: solid 1px black;
+}

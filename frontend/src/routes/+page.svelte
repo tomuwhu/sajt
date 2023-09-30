@@ -6,10 +6,10 @@
         i1 = ''
     }
 </script>
-<a href="reg">Regisztráció</a>
-<a href="https://github.com/TryGhost/node-sqlite3/wiki/API">sqlite3 docs</a>
 <h1>Ez a frontend</h1> 
-<br>
+<a href="reg">Regisztráció</a>
+<a href="https://github.com/TryGhost/node-sqlite3/wiki/API" target="_blank">sqlite3 docs</a>
+<br><br>
 <input bind:value={i1} placeholder="megfordítandó szöveg">
 <button on:click={
     ()=>fetch(`${serverbase}/be/${i1}`)
