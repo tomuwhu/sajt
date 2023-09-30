@@ -1,0 +1,18 @@
+body {
+    background-color: antiquewhite;
+    text-align: center;
+}
+input {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 6px;
+    width: 200px;
+}
+form {
+    border: solid 2px green;
+    padding: 20px;
+    display: inline-block;
+    background-color: rgb(187, 187, 164);
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px black;
+}
